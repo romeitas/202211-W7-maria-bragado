@@ -6,8 +6,9 @@
     "type": "module",
     "scripts": {
         "start": "tsc --watch",
+        "build": "tsc",
         "test": "jest --watchAll --coverage",
-        "test:prod": "jest --watchAll --coverage --watchAll=false",
+        "test:prod": "jest --watchAll --coverage --watchAll=false --passWithNoTests",
         "prepare": "husky install",
         "pre-push": "npm test",
         "commit-msg": "npm test"
