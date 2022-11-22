@@ -1,8 +1,18 @@
-export class Personaje {
+export interface Personaje {
     name: string;
     family: string;
     age: number;
     isAlive: boolean;
+    message: string;
+    serie: string;
+    communication(): string;
+    death(): boolean;
+}
+export class Personaje {
+    name: string;
+    family: string;
+    age: number;
+    #isAlive: boolean;
     message: string;
     static serie = 'Game of Thrones';
 
@@ -10,14 +20,14 @@ export class Personaje {
         this.name = name;
         this.family = family;
         this.age = age;
-        this.isAlive = true;
+        this.#isAlive = true;
         this.message = '';
     }
-    communication() {
+    communication(): string {
         return this.message;
     }
 
-    isDeath() {
-        this.isAlive = false;
+    death(): boolean {
+        return (this.#isAlive = false);
     }
 }
