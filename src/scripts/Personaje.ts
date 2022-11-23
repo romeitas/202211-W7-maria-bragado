@@ -1,4 +1,4 @@
-export interface Personaje {
+export interface PersonajeTodo {
     name: string;
     family: string;
     age: number;
@@ -8,11 +8,11 @@ export interface Personaje {
     communication(): string;
     death(): boolean;
 }
-export class Personaje {
+export class Personaje implements PersonajeTodo {
     name: string;
     family: string;
     age: number;
-    #isAlive: boolean;
+    isAlive: boolean;
     message: string;
     static serie = 'Game of Thrones';
 
@@ -20,7 +20,7 @@ export class Personaje {
         this.name = name;
         this.family = family;
         this.age = age;
-        this.#isAlive = true;
+        this.isAlive = true;
         this.message = '';
     }
     communication(): string {
@@ -28,6 +28,6 @@ export class Personaje {
     }
 
     death(): boolean {
-        return (this.#isAlive = false);
+        return (this.isAlive = false);
     }
 }
