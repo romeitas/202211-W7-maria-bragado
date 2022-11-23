@@ -1,9 +1,9 @@
-import { Rey } from './rey.js';
-import { Luchador } from './luchador.js';
-import { Asesor } from './asesor.js';
-import { Escudero } from './escudero.js';
+import { Rey } from './Rey.js';
+import { Luchador } from './Luchador.js';
+import { Asesor } from './Asesor.js';
+import { Escudero } from './Escudero.js';
 
-export const Personajes = [
+export const personajes = [
     new Rey('Joffrey', 'Baratheon', 30, 6),
     new Luchador('Jaime', 'Lannister', 23, 'cañón', 2),
     new Luchador('Daenerys', 'Targaryen', 25, 'cuchillo', 4),
